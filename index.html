@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Simple USB Barcode Scanner</title>
+    
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="barcode-scanner-component-wrapper">
+        <h2>Wired USB Barcode Scanner</h2>
+        <!-- barcode scanner block -->
+        <div class="barcode-scanner-container">
+            <p>Barcode Generator Tools</p>
+            <input type="text" name="barcodeTextInput" id="barcodeTextInput">
+            <!-- barcode preview block -->
+            <div class="barcode-preview-block">
+                <svg id="preview-barcode-svg"></svg>
+            </div>
+            <!-- randomly or manually buttons block -->
+            <div class="random-generate-btn-block">
+                <button class="btn-success" id="random-btn">Random</button>
+                <button class="btn-warning" id="generate-btn">Generate</button>
+            </div>
+        </div>
+        <!-- barcode product result block -->
+        <div class="barcode-product-result-container">
+
+        </div>
+        <!--  -->
+    </div>
+
+    <div id="last-barcode"></div>
+
+    <!-- Quagga Barcode -->
+    <script src="vendors/quagga_barcode.js"></script>
+    <!-- JQuery -->
+    <script src="vendors/jquery.min.js"></script>
+    
+    <!-- custom script -->
+    <!-- source links [YouTube] -->
+    <!-- https://www.youtube.com/watch?v=rIspSL5UIJc -->
+    <script src="index.js"></script>
+    <script>
+        $(document).ready(function(){    
+            activateBarCodeScanner( '#barcodeTextInput', '#preview-barcode-svg' );
+
+            onGenerateButtonClickedGenerateBarcodeBaseOnInput( '#generate-btn', '#barcodeTextInput', '#preview-barcode-svg' );
+
+            // number of duplicated random number is lessly match
+            StrongAlgorithm_onRandomButtonClickedGenerateRandomBarcode( '#random-btn', '#barcodeTextInput', '#preview-barcode-svg', 8);
+
+        })
+    </script>
+    
+</body>
+
+</html>

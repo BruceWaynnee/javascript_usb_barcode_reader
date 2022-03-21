@@ -1,0 +1,68 @@
+/* Component Utility StyleSheet */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Barcode Scanner Component Wrapper */
+.barcode-scanner-component-wrapper {
+    color: white;
+    display: flex;
+    padding: 2em 0;
+    flex-flow: column wrap;
+    background-color: #4e8975;
+}
+.barcode-scanner-component-wrapper h2 { text-align: center; }
+
+/* Barcode Scanner Block */
+.barcode-scanner-container {
+    width: 25rem;
+    display: flex;
+    padding: 2rem 0;
+    flex-flow: row wrap;
+    margin: 4rem 0 0 15rem;
+    border-radius: 15px;
+    justify-content: center;
+    color: rgb(53, 52, 52);
+    background-color: #B7CEEC;
+}
+.barcode-scanner-container p { 
+    width: 100%; 
+    text-align: center; 
+}
+.barcode-scanner-container input {
+    width: 11rem;
+    height: 1.5rem;
+    font-size: 16px;
+    margin-top: 1rem;
+    text-align: center;
+}
+/* Barcode Preview Block */
+.barcode-preview-block {
+    margin: 1rem;
+}
+/* Randomly Or Manually Buttons Block */
+.random-generate-btn-block button {
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: .8rem 1.5rem;
+    border: .5px solid gray;
+}
+
+/* Custom Btn Success */
+.btn-success {
+    color: white;
+    background-color: #00A36C;
+}
+.btn-success:hover { background-color: #07d307; }
+
+/* Custom Btn Warning */
+.btn-warning {
+    color: black;
+    background-color: #E2F516;
+}
+.btn-warning:hover {  background-color: #ffae00; }
+
+/*  */
